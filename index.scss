@@ -1,0 +1,105 @@
+//SCSS global variables
+$page-background-color: #dceed1;
+$clock-background-color: #736372;
+$clock-border-color: #a18276;
+$timer-display-background-color: #aac0aa;
+$timer-display-border-color: #7a918d;
+$font-color: #efefef;
+$button-font-color: #7a918d;
+
+//SCSS Mixins
+@mixin flex-row {
+  display: flex;
+}
+
+@mixin flex-row-center {
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-default {
+  border: none;
+  background: none;
+  color: $button-font-color;
+  > i {
+    font-size: 1.5em;
+  }
+}
+
+//SCSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  @include flex-column-center;
+  height: 100vh;
+  width: 100vw;
+  background: $page-background-color;
+  color: $font-color;
+}
+.clock {
+  @include flex-column-center;
+  padding: 30px;
+  border: 10px solid $clock-border-color;
+  border-radius: 10px;
+  background-color: $clock-background-color;
+}
+
+#title {
+  @include flex-row-center;
+  margin-bottom: 15px;
+}
+
+.dial-container {
+  @include flex-column-center;
+  > .dial {
+    @include flex-column-center;
+    margin: 5px 0px;
+    > .dial-title {
+      @include flex-row-center;
+      > h3 {
+        font-weight: 500;
+      }
+    }
+    > .dial-controls {
+      @include flex-row-center;
+      > button {
+        @include button-default;
+        margin: 5px 10px;
+      }
+    }
+  }
+}
+.timer {
+  @include flex-column-center;
+  > .timer-display {
+    @include flex-column-center;
+    margin: 10px;
+    padding: 15px 30px;
+    border: 5px solid $timer-display-border-color;
+    border-radius: 10px;
+    background-color: $timer-display-background-color;
+  }
+  > .timer-controls {
+    @include flex-row-center;
+    > button {
+      @include button-default;
+      margin: 2px 15px;
+    }
+  }
+}

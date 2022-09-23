@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #dceed1;
+  color: #efefef;
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 10px solid #a18276;
+  border-radius: 10px;
+  background-color: #736372;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.dial-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dial-container > .dial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
+}
+.dial-container > .dial > .dial-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dial-container > .dial > .dial-title > h3 {
+  font-weight: 500;
+}
+.dial-container > .dial > .dial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dial-container > .dial > .dial-controls > button {
+  border: none;
+  background: none;
+  color: #7a918d;
+  margin: 5px 10px;
+}
+.dial-container > .dial > .dial-controls > button > i {
+  font-size: 1.5em;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timer > .timer-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 15px 30px;
+  border: 5px solid #7a918d;
+  border-radius: 10px;
+  background-color: #aac0aa;
+}
+.timer > .timer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer > .timer-controls > button {
+  border: none;
+  background: none;
+  color: #7a918d;
+  margin: 2px 15px;
+}
+.timer > .timer-controls > button > i {
+  font-size: 1.5em;
+}
